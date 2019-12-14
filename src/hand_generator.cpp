@@ -5,36 +5,14 @@
 using namespace std;
 
 const int hands = 1000000;
-const int epochs = 10;
-
-void average(float counts[10], int n) {
-	for (int i = 0; i < 10; i++)
-		counts[i] = counts[i]/(float)n;
-}
 
 int main() {
 	Card deck[52];
-	initializeDeck(deck);
 
 	Card hand[5];
 
 	int rankCount[10] = {0};
-	float rankSums[10] = {0};
 	
-	/*int inc = 0;
-	do {
-		inc++;
-		if (inc % 10 == 0)
-			initializeDeck(deck);
-
-		generateHand(deck, hand);
-	} while (!pairCheck(hand));
-
-	for (int i = 0; i < 5; i++) {
-		cout << "Card " << i << ": " << endl;
-		cout << hand[i] << endl << endl;
-	}*/
-
 	for (int j = 0; j < hands; j++) {
 		initializeDeck(deck);
 
